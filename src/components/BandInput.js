@@ -1,14 +1,21 @@
-// Add BandInput component
-import React, { Component } from 'react'
+import React from 'react'
 
-class BandInput extends Component {
-  render() {
+
+const BandInput = (props) => {
+
+
+
     return(
       <div>
         Band Input
+        <form onSubmit={props.handleSubmit} >
+        <input type="text" onChange={props.handleChange} />
+        <input type="submit" />
+        </form>
       </div>
     )
-  }
+
 }
+
 
 export default BandInput
